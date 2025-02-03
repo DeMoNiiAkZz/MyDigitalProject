@@ -8,7 +8,7 @@ function Sidebar({ role }) {
       <h2>{role === "admin" ? "Admin Panel" : "Espace Client"}</h2>
       <ul className="nav flex-column">
         <li className="nav-item">
-          <Link className="nav-link" to={role === "admin" ? "/admin" : "/client"}>
+          <Link className="nav-link" to={role === "admin" ? "/admin" : "/"}>
             📊 Dashboard
           </Link>
           <Link className="nav-link" to={role === "admin" ? "/testadmin" : "/404"}>
