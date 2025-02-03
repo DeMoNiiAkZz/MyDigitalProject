@@ -1,0 +1,8 @@
+---------------
+Base de donnée : https://auth-db1746.hstgr.io/index.php?db=u825403542_audacieuses
+
+DbName : u825403542_audacieuses
+User : u825403542_audacieuses
+Password : EfZiP6gxHtF4jUNE
+
+--------------
