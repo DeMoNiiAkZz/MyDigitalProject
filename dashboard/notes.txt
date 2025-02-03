@@ -1,0 +1,7 @@
+Démarrer l'application : npm start
+Installer une dépendance : npm install (nom dépendance)
+
+
+Pour les routes : App.js
+
+Voir les dépendances dans package.json 
