@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 
 import AdminDashboard from "./pages/Enzo/Dashboard";
 import ClientDashboard from "./pages/Aurore/Dashboard";
+import Test from "./pages/Enzo/Test";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/client" element={<ClientDashboard />} />
+        <Route path="/testadmin" element={<Test />} />
         <Route path="*" element={<h1 className="text-center mt-5">404 - Page non trouvée ❌</h1>} />
       </Routes>
     </Router>

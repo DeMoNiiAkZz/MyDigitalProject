@@ -11,6 +11,9 @@ function Sidebar({ role }) {
           <Link className="nav-link" to={role === "admin" ? "/admin" : "/client"}>
             📊 Dashboard
           </Link>
+          <Link className="nav-link" to={role === "admin" ? "/testadmin" : "/404"}>
+            TEST
+          </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link text-danger" to="/">

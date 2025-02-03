@@ -5,3 +5,5 @@ Installer une dépendance : npm install (nom dépendance)
 Pour les routes : App.js
 
 Voir les dépendances dans package.json 
+
+Chaque page : import React from "react";
