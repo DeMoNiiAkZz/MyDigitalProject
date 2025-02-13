@@ -11,7 +11,7 @@ import ModulesClient from "./pages/Aurore/Modules";
 import PlanningClient from "./pages/Aurore/Planning";
 import ProfilClient from "./pages/Aurore/Profil";
 
-import Test from "./pages/Enzo/Test";
+
 
 function HomePage() {
   const navigate = useNavigate();
@@ -39,8 +39,8 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
 
 
-{/* Aurore */}
-        <Route path="/" element={<ClientDashboard />} />
+        {/* Aurore */}
+        <Route path="/client" element={<ClientDashboard />} />
         <Route path="/documents" element={<DocumentsClient />} />
         <Route path="/profil" element={<ProfilClient />} />
         <Route path="/modules" element={<ModulesClient />} />
