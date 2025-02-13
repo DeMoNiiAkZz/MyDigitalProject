@@ -6,7 +6,7 @@ function Sidebar({ role }) {
     <div className="d-flex flex-column p-3 bg-light vh-100" style={{ width: "350px" }}>
       <h2>{role === "admin" ? "Admin Panel" : "Espace Client"}</h2>
       <ul className="nav flex-column">
-        
+
         {role === "admin" && (
           <>
             <li className="nav-item">
@@ -27,45 +27,52 @@ function Sidebar({ role }) {
           </>
         )}
 
-        
+
         {role === "client" && (
           <>
-            <li className="nav-item">
-              <Link className="nav-link" to="/client">
-                🏠 Accueil
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/documents">
-                📄 Documents
-              </Link>
-            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/profil">
                 👤 Profil
               </Link>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link" to="/modules">
-                📚 Modules
+              <Link className="nav-link" to="/client">
+                🏠 Accueil
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/planning">
-                🗓️ Planning
+                🗓️Mon Planning
               </Link>
             </li>
-          </>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/modules">
+                📚 Mes Modules
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/documents">
+                📄Mes  Documents
+              </Link>
+            </li>
+          <hr />
+
+
+      </>
         )}
 
-        
-        <li className="nav-item">
-          <Link className="nav-link text-danger" to="/">
-            🚪 Déconnexion
-          </Link>
-        </li>
-      </ul>
-    </div>
+
+      <li className="nav-item">
+        <Link className="nav-link text-danger" to="/">
+          🚪 Déconnexion
+        </Link>
+      </li>
+    </ul>
+    </div >
   );
 }
 
