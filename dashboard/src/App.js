@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 
 import AdminDashboard from "./pages/Enzo/Dashboard";
 
+
+// Aurore
 import ClientDashboard from "./pages/Aurore/Dashboard";
 import DocumentsClient from "./pages/Aurore/Documents";
 import ModulesClient from "./pages/Aurore/Modules";
@@ -36,6 +38,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/admin" element={<AdminDashboard />} />
 
+
+{/* Aurore */}
         <Route path="/" element={<ClientDashboard />} />
         <Route path="/documents" element={<DocumentsClient />} />
         <Route path="/profil" element={<ProfilClient />} />
