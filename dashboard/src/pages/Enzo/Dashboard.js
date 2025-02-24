@@ -8,7 +8,7 @@ function AdminDashboard() {
     <div className="d-flex">
       <Sidebar role="admin" />
       <div className="container mt-4">
-        <h1>🏢 Tableau de bord Admin</h1>
+        <h1> Tableau de bord Admin</h1>
         
         <div className="row">
          

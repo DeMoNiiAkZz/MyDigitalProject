@@ -32,23 +32,6 @@ function Profil() {
                   <input type='date' id='date_naissance' name='date_naissance' required />
                 </div>
 
-            
-                <div className="col-12 mt-3"> Vous souhaitez modifier votre mot de passe ? </div>
-
-                <div className='col-md-4'>
-                  <label htmlFor='mot_de_passe'>Mot de passe :</label>
-                  <input type='password' id='mot_de_passe' name='mot_de_passe' required />
-                </div>
-                <div className='col-md-4'>
-                  <label htmlFor='nouveau_mot_de_passe'>Nouveau mot de passe :</label>
-                  <input type='password' id='nouveau_mot_de_passe' name='nouveau_mot_de_passe' required />
-                </div>
-                <div className='col-md-4'>
-                  <label htmlFor='confirmer_nouveau_mot_de_passe'>Confirmer nouveau mot de passe :</label>
-                  <input type='password' id='confirmer_nouveau_mot_de_passe' name='confirmer_nouveau_mot_de_passe' required />
-                </div>
-    
-
               </div>
             </form >
           </div>
@@ -71,6 +54,54 @@ function Profil() {
             </form >
 
           </div>
+
+
+        <div className="box mb-4">
+          <h2>Changer le mot de passe</h2>
+          <form >
+            <div className="row">
+              <div className="col-md-12 mb-3">
+                <label htmlFor="motDePasseActuel" className="">Mot de passe actuel :</label>
+                <input
+                  type="password"
+                  id="motDePasseActuel"
+                  name="motDePasseActuel"
+                  className=""
+                  
+                   
+                  required
+                />
+              </div>
+              <div className="col-md-12 mb-3">
+                <label htmlFor="nouveauMotDePasse" className="">Nouveau mot de passe :</label>
+                <input
+                  type="password"
+                  id="nouveauMotDePasse"
+                  name="nouveauMotDePasse"
+                  className=""
+                  
+                   
+                  required
+                />
+              </div>
+              <div className="col-md-12 mb-3">
+                <label htmlFor="confirmerNouveauMotDePasse" className="">Confirmer nouveau mot de passe :</label>
+                <input
+                  type="password"
+                  id="confirmerNouveauMotDePasse"
+                  name="confirmerNouveauMotDePasse"
+                  className=""
+              
+                   
+                  required
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn btn-primary p-2 fw-bold fs-5">Mettre à jour le profil</button>
+            </div>
+          </form>
+        </div>
          
         </div>
       </div>

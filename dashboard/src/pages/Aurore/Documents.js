@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar";
 import { FaFilePdf } from "react-icons/fa";
+import { IoDocument } from "react-icons/io5";
 
 
 const DataClients = [
@@ -22,14 +23,13 @@ function Documents() {
     <div className="d-flex">
       <Sidebar role="client" />
       <div className="container mt-4">
-        <h1 className="text-white">Documents</h1>
+        <h1><IoDocument className="ms-2 mb-3" size={40}/> Documents</h1>
         <div className="row">
           {DataDocuments.map((document) => (
             <div key={document.id} className="col-4 col-sm-12 col-md-4 ">
-
                 <div className="box p-2 mb-4">
                   <h3>{document.name}</h3>
-                  <p>Date: {document.date}</p>
+                  <p> Date: {document.date}</p>
                   <div className="text-decoration-none"><FaFilePdf/><a href={document.url} download className="text-decoration-none">Télécharger le document</a></div>
                 </div>
             </div>

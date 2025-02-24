@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar";
 import { useParams, Link } from "react-router-dom";
+import { GoFileDirectory } from "react-icons/go";
 
 
 const DataModules = [
@@ -31,8 +32,8 @@ function ModulesDetails() {
         <Sidebar role="client" />
 
         <div className="container mt-4">
-
-          <h1 className="text-white">Mes Modules</h1>
+          
+          <h1><GoFileDirectory className="ms-2" size={30}/> Mes Modules </h1>
 
           <div className="box">
             <img src="/assets/images/modules.png" className="img-fluid rounded h-50" alt="logo" />

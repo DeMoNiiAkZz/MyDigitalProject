@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar";
+import { FaCalendar } from "react-icons/fa";
 
 // Données fictives
 const DataPlanning = [
@@ -45,7 +46,7 @@ function Planning() {
     <div className="d-flex">
       <Sidebar role="client" />
       <div className="container mt-4">
-        <h1 className="text-white">Votre planning d’accompagnement</h1>
+        <h1 className="text-white ms-3"> <FaCalendar size={30}/> Votre planning d’accompagnement </h1>
 
        
         <div className="box">

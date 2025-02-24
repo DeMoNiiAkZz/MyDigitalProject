@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
+import { GoFileDirectory } from "react-icons/go";
 
 const DataModules = [
   { id: 1, name: "Module 1", description: "Description du module 1" },
@@ -15,7 +16,7 @@ function Modules() {
     <div className="d-flex">
       <Sidebar role="client" />
       <div className="container mt-4">
-        <h1 className="text-white">Mes Modules</h1>
+        <h1><GoFileDirectory className="ms-2" size={30}/> Mes Modules </h1>
 
         <div className="box">
           <div className="row">

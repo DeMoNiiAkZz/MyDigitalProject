@@ -31,8 +31,7 @@ function ProfilAdmin() {
     <div className="d-flex">
       <Sidebar role="admin" />
       <div className="container mt-4">
-        <h1><FaUser className="ms-2 mb-3" size={40}/> Profil</h1>
-
+        <h1><FaUser className="ms-2 mb-3" size={40} /> Profil</h1>
 
         <div className="box mb-4">
           <h2>Vos informations personnelles</h2>
@@ -86,12 +85,21 @@ function ProfilAdmin() {
                   required
                 />
               </div>
+              <div className="col-md-6 mb-3">
+                <label htmlFor="date" className="">Date de Naissance :</label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  className=""
+                  value={formData.dateNaissance}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
             </div>
           </form>
         </div>
-
-
-
 
         <div className="box mb-4">
           <h2>Changer le mot de passe</h2>
