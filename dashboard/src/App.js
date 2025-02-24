@@ -1,7 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 
+import Error404 from "./pages/404";
+
 import AdminDashboard from "./pages/Enzo/Dashboard";
+import ProfilAdmin from "./pages/Enzo/Profil";
+import ClientsAdmin from "./pages/Enzo/Clients";
+import PlanningAdmin from "./pages/Enzo/Planning";
+import DocumentsAdmin from "./pages/Enzo/Documents";
+import ModulesAdmin from "./pages/Enzo/Modules";
+import SeancesAdmin from "./pages/Enzo/Seances";
 
 
 // Aurore
@@ -10,6 +18,8 @@ import DocumentsClient from "./pages/Aurore/Documents";
 import ModulesClient from "./pages/Aurore/Modules";
 import PlanningClient from "./pages/Aurore/Planning";
 import ProfilClient from "./pages/Aurore/Profil";
+import ModulesDetails from "./pages/Aurore/ModulesDetails";
+import Seance from "./pages/Aurore/Seance";
 
 
 
@@ -37,6 +47,12 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/profil" element={<ProfilAdmin />} />
+        <Route path="/admin/clients" element={<ClientsAdmin />} />
+        <Route path="/admin/planning" element={<PlanningAdmin />} />
+        <Route path="/admin/documents" element={<DocumentsAdmin />} />
+        <Route path="/admin/modules" element={<ModulesAdmin />} />
+        <Route path="/admin/seances" element={<SeancesAdmin />} />
 
 
         {/* Aurore */}
@@ -44,10 +60,11 @@ function App() {
         <Route path="/documents" element={<DocumentsClient />} />
         <Route path="/profil" element={<ProfilClient />} />
         <Route path="/modules" element={<ModulesClient />} />
-        <Route path="/modules/:id_module" element={<ModulesClient />} />
+        <Route path="/module/:id_module" element={<ModulesDetails/>} />
+        <Route path="/seance/:id_seance" element={<Seance/>} />
         <Route path="/planning" element={<PlanningClient />} />
 
-        <Route path="*" element={<h1 className="text-center mt-5">404 - Page non trouvée ❌</h1>} />
+        <Route path="*" element={<Error404/>} />
       </Routes>
     </Router>
   );

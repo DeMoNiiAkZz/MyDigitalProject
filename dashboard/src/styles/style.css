@@ -1,15 +1,45 @@
-body{
+body {
     background-color: #1D381F;
-}
-
-.box{
+    color : #FFFFFF;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .sidebar {
+    width: 350px;
+    height: 100vh;
+    
+    
+    top: 0;
+    left: 0;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .box {
     background-color: white;
+    color: #000;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
-}
-
-input{
+  }
+  
+  input {
     width: 100%;
     color: #000000;
     font-size: 12px;
@@ -17,9 +47,9 @@ input{
     border: solid 2px #1D381F;
     border-radius: 10px;
     background-color: #ffffff;
-}
-
-label {
+  }
+  
+  label {
     top: 10px;
     font-size: 12px;
     line-height: 15px;
@@ -27,10 +57,45 @@ label {
     padding: 0 10px;
     margin: 0px 10px;
     position: relative;
-}
-
-
-.Module{
+  }
+  
+  .Module {
     background-color: #1D381F;
+    border-radius: 10px;
     color: white;
-}
+  }
+  
+  .nav-link {
+    color: #1D381F;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+  }
+  
+  .nav-link:hover {
+    color: #1D381F;
+    text-decoration: none;
+  }
+  
+  .nav-link.active {
+    background-color: #EF7D4E;
+    color: white !important;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 80%;
+      left: -80%;
+      position: fixed;
+      z-index: 1;
+    }
+  
+    .sidebar.show {
+      left: 0;
+    }
+  
+    .overlay {
+      display: block;
+    }
+  }
