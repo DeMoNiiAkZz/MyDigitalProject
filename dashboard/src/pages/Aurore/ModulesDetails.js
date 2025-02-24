@@ -26,36 +26,38 @@ function ModulesDetails() {
   }
 
   return (
-    <div className="d-flex">
-      <Sidebar role="client" />
+    <div className="page-contenu">
+      <div className="d-flex">
+        <Sidebar role="client" />
 
-      <div className="container mt-4">
+        <div className="container mt-4">
 
-        <h1 className="text-white">Mes Modules</h1>
+          <h1 className="text-white">Mes Modules</h1>
 
-        <div className="box">
-          <img src="/assets/images/modules.png" className="img-fluid rounded h-50" alt="logo" />
-          <h2 >{module.name}</h2>
-          <p>{module.description}</p>
-        </div>
-
-        <div className="box">
-          <div className="row">
-            {DataSeances.map((seance) => (
-              <div key={seance.id} className="col-4 col-sm-12 col-md-4">
-                
-                <Link to={`/seance/${seance.id}`} className="text-decoration-none">
-                  <div className="Module p-2 mb-4">
-                    <img src="/assets/images/modules.png" className="img-fluid rounded" alt="logo" />
-                    <h3>{seance.name}</h3>
-                    <p>{seance.description}</p>
-                  </div>
-                </Link>
-              </div>
-            ))}
+          <div className="box">
+            <img src="/assets/images/modules.png" className="img-fluid rounded h-50" alt="logo" />
+            <h2 >{module.name}</h2>
+            <p>{module.description}</p>
           </div>
-        </div>
 
+          <div className="box">
+            <div className="row">
+              {DataSeances.map((seance) => (
+                <div key={seance.id} className="col-4 col-sm-12 col-md-4">
+
+                  <Link to={`/seance/${seance.id}`} className="text-decoration-none">
+                    <div className="Module p-2 mb-4">
+                      <img src="/assets/images/modules.png" className="img-fluid rounded" alt="logo" />
+                      <h3>{seance.name}</h3>
+                      <p>{seance.description}</p>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   );

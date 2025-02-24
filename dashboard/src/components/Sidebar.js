@@ -76,30 +76,30 @@ function Sidebar({ role }) {
             <>
               <li className="nav-item p-2">
                 <Link className={`nav-link ${location.pathname === "/profil" ? "active" : ""}`} to="/profil">
-                  <FaUser /> Profil
+                  <FaUser  className="mb-2 me-2" /> Profil
                 </Link>
               </li>
 
               <li className="nav-item p-2">
                 <Link className={`nav-link ${location.pathname === "/client" ? "active" : ""}`} to="/client">
-                  <FaHome /> Accueil
+                  <FaHome  className="mb-2 me-2" /> Accueil
                 </Link>
               </li>
 
               <li className="nav-item p-2">
                 <Link className={`nav-link ${location.pathname === "/planning" ? "active" : ""}`} to="/planning">
-                  <FaCalendar /> Mon Planning
+                  <FaCalendar  className="mb-2 me-2" /> Mon Planning
                 </Link>
               </li>
 
               <li className="nav-item p-2">
                 <Link className={`nav-link ${location.pathname === "/modules" ? "active" : ""}`} to="/modules">
-                  <FaBook /> Mes Modules
+                  <FaBook  className="mb-2 me-2" /> Mes Modules
                 </Link>
               </li>
               <li className="nav-item p-2">
                 <Link className={`nav-link ${location.pathname === "/documents" ? "active" : ""}`} to="/documents">
-                  <IoDocumentsOutline /> Mes Documents
+                  <IoDocumentsOutline  className="mb-2 me-2" /> Mes Documents
                 </Link>
               </li>
               <hr />

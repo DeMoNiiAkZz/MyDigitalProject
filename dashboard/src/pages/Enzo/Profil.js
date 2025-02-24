@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../../components/Sidebar";
+import { FaUser } from "react-icons/fa";
 
 function ProfilAdmin() {
   const [formData, setFormData] = useState({
@@ -13,7 +14,6 @@ function ProfilAdmin() {
     confirmerNouveauMotDePasse: ""
   });
 
-  // Fonction pour gérer le changement des valeurs dans le formulaire
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -22,7 +22,6 @@ function ProfilAdmin() {
     }));
   };
 
-  // Fonction de soumission (pour le moment juste un log dans la console)
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -32,117 +31,113 @@ function ProfilAdmin() {
     <div className="d-flex">
       <Sidebar role="admin" />
       <div className="container mt-4">
-        <h1>🏢 Profil</h1>
-        <div className="row">
-          <div className="col-12">
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label htmlFor="nom" className="form-label">Nom</label>
+        <h1><FaUser className="ms-2 mb-3" size={40}/> Profil</h1>
+
+
+        <div className="box mb-4">
+          <h2>Vos informations personnelles</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-md-6 mb-3">
+                <label htmlFor="nom" className="">Nom :</label>
                 <input
                   type="text"
-                  className="form-control"
                   id="nom"
                   name="nom"
+                  className=""
                   value={formData.nom}
                   onChange={handleChange}
                   required
                 />
               </div>
-
-              <div className="mb-3">
-                <label htmlFor="prenom" className="form-label">Prénom</label>
+              <div className="col-md-6 mb-3">
+                <label htmlFor="prenom" className="">Prénom :</label>
                 <input
                   type="text"
-                  className="form-control"
                   id="prenom"
                   name="prenom"
+                  className=""
                   value={formData.prenom}
                   onChange={handleChange}
                   required
                 />
               </div>
-
-              <div className="mb-3">
-                <label htmlFor="telephone" className="form-label">Téléphone</label>
-                <input
-                  type="tel"
-                  className="form-control"
-                  id="telephone"
-                  name="telephone"
-                  value={formData.telephone}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="mb-3">
-                <label htmlFor="dateNaissance" className="form-label">Date de naissance</label>
-                <input
-                  type="date"
-                  className="form-control"
-                  id="dateNaissance"
-                  name="dateNaissance"
-                  value={formData.dateNaissance}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">Email</label>
+              <div className="col-md-6 mb-3">
+                <label htmlFor="email" className="">Email :</label>
                 <input
                   type="email"
-                  className="form-control"
                   id="email"
                   name="email"
+                  className=""
                   value={formData.email}
                   onChange={handleChange}
                   required
                 />
               </div>
+              <div className="col-md-6 mb-3">
+                <label htmlFor="telephone" className="">Téléphone :</label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  className=""
+                  value={formData.telephone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+          </form>
+        </div>
 
-              <div className="mb-3">
-                <label htmlFor="motDePasseActuel" className="form-label">Mot de passe actuel</label>
+
+
+
+        <div className="box mb-4">
+          <h2>Changer le mot de passe</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-md-12 mb-3">
+                <label htmlFor="motDePasseActuel" className="">Mot de passe actuel :</label>
                 <input
                   type="password"
-                  className="form-control"
                   id="motDePasseActuel"
                   name="motDePasseActuel"
+                  className=""
                   value={formData.motDePasseActuel}
                   onChange={handleChange}
                   required
                 />
               </div>
-
-              <div className="mb-3">
-                <label htmlFor="nouveauMotDePasse" className="form-label">Nouveau mot de passe</label>
+              <div className="col-md-12 mb-3">
+                <label htmlFor="nouveauMotDePasse" className="">Nouveau mot de passe :</label>
                 <input
                   type="password"
-                  className="form-control"
                   id="nouveauMotDePasse"
                   name="nouveauMotDePasse"
+                  className=""
                   value={formData.nouveauMotDePasse}
                   onChange={handleChange}
                   required
                 />
               </div>
-
-              <div className="mb-3">
-                <label htmlFor="confirmerNouveauMotDePasse" className="form-label">Confirmer nouveau mot de passe</label>
+              <div className="col-md-12 mb-3">
+                <label htmlFor="confirmerNouveauMotDePasse" className="">Confirmer nouveau mot de passe :</label>
                 <input
                   type="password"
-                  className="form-control"
                   id="confirmerNouveauMotDePasse"
                   name="confirmerNouveauMotDePasse"
+                  className=""
                   value={formData.confirmerNouveauMotDePasse}
                   onChange={handleChange}
                   required
                 />
               </div>
-
-              <button type="submit" className="btn btn-primary">Mettre à jour</button>
-            </form>
-          </div>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn btn-primary p-2 fw-bold fs-5">Mettre à jour le profil</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
