@@ -1,0 +1,36 @@
+body{
+    background-color: #1D381F;
+}
+
+.box{
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    width: 100%;
+    color: #000000;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: solid 2px #1D381F;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+label {
+    top: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: white;
+    padding: 0 10px;
+    margin: 0px 10px;
+    position: relative;
+}
+
+
+.Module{
+    background-color: #1D381F;
+    color: white;
+}

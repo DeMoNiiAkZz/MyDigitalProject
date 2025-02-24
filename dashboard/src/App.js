@@ -44,6 +44,7 @@ function App() {
         <Route path="/documents" element={<DocumentsClient />} />
         <Route path="/profil" element={<ProfilClient />} />
         <Route path="/modules" element={<ModulesClient />} />
+        <Route path="/modules/:id_module" element={<ModulesClient />} />
         <Route path="/planning" element={<PlanningClient />} />
 
         <Route path="*" element={<h1 className="text-center mt-5">404 - Page non trouvée ❌</h1>} />

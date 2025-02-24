@@ -29,7 +29,7 @@ const DataModules = [
   }
 ]
 
-function Modules() {
+function ModulesDetails() {
   return (
     <div className="d-flex">
       <Sidebar role="client" />
@@ -42,13 +42,11 @@ function Modules() {
           <div className='row'>
             {DataModules.map((module) =>
               <div className='col-md-4'>
-                
-                <div key={module.id} className="Module">
+                <div key={module.id} className="">
                   <img src={module.image} alt="logo" />
                   <h3>{module.name}</h3>
                   <p>{module.description}</p>
                 </div>
-                 
               </div>
             )}
           </div>
@@ -62,4 +60,4 @@ function Modules() {
   );
 }
 
-export default Modules;
+export default ModulesDetails;

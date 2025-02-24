@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaUser, FaHome, FaCalendar, FaBook } from "react-icons/fa";
+import { IoDocumentsOutline, IoExitOutline  } from "react-icons/io5";
 
 function Sidebar({ role }) {
   return (
@@ -10,18 +12,19 @@ function Sidebar({ role }) {
         {role === "admin" && (
           <>
             <li className="nav-item">
-              <Link className="nav-link" to="/admin">
-                📊 Dashboard
+              <Link className="nav-link" to="/profil">
+                <FaUser /> Profil
               </Link>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link" to="/admin/users">
-                👥 Gestion des utilisateurs
+              <Link className="nav-link" to="/client">
+                <FaHome /> Accueil
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/admin/settings">
-                ⚙️ Paramètres
+                 Paramètres
               </Link>
             </li>
           </>
@@ -33,45 +36,45 @@ function Sidebar({ role }) {
 
             <li className="nav-item">
               <Link className="nav-link" to="/profil">
-                👤 Profil
+                <FaUser /> Profil
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/client">
-                🏠 Accueil
+                <FaHome /> Accueil
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/planning">
-                🗓️Mon Planning
+                <FaCalendar /> Mon Planning
               </Link>
             </li>
 
             <li className="nav-item">
               <Link className="nav-link" to="/modules">
-                📚 Mes Modules
+                <FaBook /> Mes Modules
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/documents">
-                📄Mes  Documents
+                <IoDocumentsOutline /> Mes  Documents
               </Link>
             </li>
-          <hr />
+            <hr />
 
 
-      </>
+          </>
         )}
 
 
-      <li className="nav-item">
-        <Link className="nav-link text-danger" to="/">
-          🚪 Déconnexion
-        </Link>
-      </li>
-    </ul>
+        <li className="nav-item">
+          <Link className="nav-link text-danger" to="/">
+            <IoExitOutline />  Déconnexion
+          </Link>
+        </li>
+      </ul>
     </div >
   );
 }

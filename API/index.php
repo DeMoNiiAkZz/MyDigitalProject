@@ -11,7 +11,6 @@ require 'Router.php';
 $router = new Router();
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$path = "/API/";
 
 //utilisateurs
 $router->get("{$path}utilisateurs", function() {

@@ -7,3 +7,16 @@ Pour les routes : App.js
 Voir les dépendances dans package.json 
 
 Chaque page : import React from "react";
+
+Pour l'api utiliser axios :
+
+React -> appli Dashboard (front)
+
+Nextjs -> seo (front + back)
+
+nodejs -> (back) 
+
+
+
+
+map = for

@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Users = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => { 
-    fetch('https://api.example.com/users')
-      .then(response => response.json())
-      .then(data => setUsers(data))
-      .catch(error => console.error('Error fetching users:', error));
-  }, []);
 
   return (
     <div>
       <h1>Users</h1>
-      <ul>
-        {users.map(user => (
-          <li key={user.id}>
-            {user.name} - {user.email}
-          </li>
-        ))}
-      </ul>
+
+      <div className='row'>
+        <div className='col-md-6'>
+          <label for='name'>Name:</label>
+          <input type='text' id='name' name='name' required />
+        </div>
+        <div className='col-md-6'>
+          <label for='email'>Email:</label>
+          <input type='email' id='email' name='email' required />
+        </div>
+      </div>
     </div>
+    
   );
 };
 
