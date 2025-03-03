@@ -30,7 +30,7 @@ function ProfilAdmin() {
   return (
     <div className="d-flex">
       <Sidebar role="admin" />
-      <div className="container mt-4">
+      <div className="container mt-4 px-5">
         <h1><FaUser className="ms-2 mb-3" size={40} /> Profil</h1>
 
         <div className="box mb-4">

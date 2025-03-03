@@ -1,134 +1,146 @@
 body {
-    background-color: #1E381F;
-    color: white;
-    
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  li {
-    list-style-type: none;
-  }
+  background-color: #1E381F;
+  color: white;
 
-  h1{
-    margin-bottom: 30px;
-  }
+}
 
-  h2{
-    color: #1E381F;
-    font-size: 1.8rem;
-  }
+a {
+  text-decoration: none;
+}
 
-  .menu-button-container {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-  }
+li {
+  list-style-type: none;
+}
 
+h1 {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #1E381F;
+  font-size: 1.8rem;
+}
+
+.menu-button-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.sidebar {
+  width: 350px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: left 0.3s ease;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.box {
+  background-color: white;
+  color: #000;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input {
+  width: 100%;
+  color: #000000;
+  padding: 10px 15px;
+  border: solid 1px #1E381F;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+label {
+  top: 10px;
+  line-height: 15px;
+  background-color: white;
+  padding: 0 10px;
+  margin: 0px 10px;
+  position: relative;
+}
+
+.Module {
+  background-color: #1E381F;
+  border-radius: 10px;
+  color: white;
+}
+
+.nav-link {
+  color: #1E381F;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.nav-link:hover {
+  color: #274a28;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  background-color: #EF7D4F;
+  color: white !important;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
   .sidebar {
-    width: 350px;
-    height: 100vh;  
-    position: sticky;
-    top: 0;
-    left: 0;
-    transition: left 0.3s ease;
+    width: 80%;
+    left: -80%;
+    position: fixed;
+    z-index: 1;
   }
-  
+
   .sidebar.show {
     left: 0;
   }
-  
+
   .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
+    display: block;
   }
-  
-  .box {
-    background-color: white;
-    color: #000;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  input {
-    width: 100%;
-    color: #000000;
-    font-size: 12px;
-    padding: 10px 15px;
-    border: solid 1px #1E381F;
-    border-radius: 10px;
-    background-color: #ffffff;
-  }
+}
 
-  label {
-    top: 10px;
-    line-height: 15px;
-    background-color: white;
-    padding: 0 10px;
-    margin: 0px 10px;
-    position: relative;
-  }
-  
-  .Module {
-    background-color: #1E381F;
-    border-radius: 10px;
-    color: white;
-  }
-  
-  .nav-link {
-    color: #1E381F;
-    text-decoration: none;
-    border-radius: 20px;
-    padding: 10px 15px;
-  }
-  
-  .nav-link:hover {
-    color: #274a28;
-    text-decoration: none;
-  }
-  
-  .nav-link.active {
-    background-color: #EF7D4F;
-    color: white !important;
-    font-weight: bold;
-  }
-  
-  @media (max-width: 767px) {
-    .sidebar {
-      width: 80%;
-      left: -80%;
-      position: fixed;
-      z-index: 1;
-    }
-  
-    .sidebar.show {
-      left: 0;
-    }
-  
-    .overlay {
-      display: block;
-    }
-  }
+.btn-primary {
+  background-color: #EF7D4F !important;
+  border: none;
+}
 
-  .btn-primary {
-    background-color: #EF7D4F;
-  }
+.btn-primary:hover {
+  background-color: #f2885a !important;
+}
 
-  .btn-primary:hover {
-    background-color: #f2885a;
-    color: white;
-  }
+.btn-primary:active {
+  background-color: #f57138 !important;
+}
 
-  .btn-primary:active {
-    background-color: #f2885a;
-    color: white;
-  }
+
+.bg-primary {
+  background-color: #EF7D4F !important;
+  color: white !important;
+}
+
+.choisir-carte {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.choisir-carte:hover {
+  transform: scale(1.05);
+}

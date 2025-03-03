@@ -5,7 +5,11 @@ import Error404 from "./pages/404";
 
 import AdminDashboard from "./pages/Enzo/Dashboard";
 import ProfilAdmin from "./pages/Enzo/Profil";
+
 import ClientsAdmin from "./pages/Enzo/Clients";
+import AddClient from "./pages/Enzo/AjouterClient";
+import DetailsClient from "./pages/Enzo/DetailsClient";
+
 import PlanningAdmin from "./pages/Enzo/Planning";
 import DocumentsAdmin from "./pages/Enzo/Documents";
 import ModulesAdmin from "./pages/Enzo/Modules";
@@ -49,6 +53,9 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/profil" element={<ProfilAdmin />} />
         <Route path="/admin/clients" element={<ClientsAdmin />} />
+        <Route path="/admin/client/add" element={<AddClient />} />
+        <Route path="/admin/client/details/:id" element={<DetailsClient />} />
+        
         <Route path="/admin/planning" element={<PlanningAdmin />} />
         <Route path="/admin/documents" element={<DocumentsAdmin />} />
         <Route path="/admin/modules" element={<ModulesAdmin />} />
