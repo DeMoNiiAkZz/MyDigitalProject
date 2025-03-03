@@ -3,17 +3,17 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 
 import Error404 from "./pages/404";
 
-import AdminDashboard from "./pages/Enzo/Dashboard";
-import ProfilAdmin from "./pages/Enzo/Profil";
+import AdminDashboard from "./pages/Admin/Dashboard";
+import ProfilAdmin from "./pages/Admin/Profil";
 
-import ClientsAdmin from "./pages/Enzo/Clients";
-import AddClient from "./pages/Enzo/AjouterClient";
-import DetailsClient from "./pages/Enzo/DetailsClient";
+import ClientsAdmin from "./pages/Admin/Clients";
+import AddClient from "./pages/Admin/AjouterClient";
+import DetailsClient from "./pages/Admin/DetailsClient";
 
-import PlanningAdmin from "./pages/Enzo/Planning";
-import DocumentsAdmin from "./pages/Enzo/Documents";
-import ModulesAdmin from "./pages/Enzo/Modules";
-import SeancesAdmin from "./pages/Enzo/Seances";
+import PlanningAdmin from "./pages/Admin/Planning";
+import DocumentsAdmin from "./pages/Admin/Documents";
+import ModulesAdmin from "./pages/Admin/Modules";
+import SeancesAdmin from "./pages/Admin/Seances";
 
 
 // Aurore
@@ -54,7 +54,7 @@ function App() {
         <Route path="/admin/profil" element={<ProfilAdmin />} />
         <Route path="/admin/clients" element={<ClientsAdmin />} />
         <Route path="/admin/client/add" element={<AddClient />} />
-        <Route path="/admin/client/details/:id" element={<DetailsClient />} />
+        <Route path="/admin/client/details/:id_client" element={<DetailsClient />} />
         
         <Route path="/admin/planning" element={<PlanningAdmin />} />
         <Route path="/admin/documents" element={<DocumentsAdmin />} />

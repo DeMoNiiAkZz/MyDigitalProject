@@ -10,6 +10,13 @@ function clientRoutes($method)
 
     switch ($method) {
         case 'GET':
+
+            if(isset($_GET['id_client'])){
+                $id_client = $_GET['id_client'];
+                
+                $controller->getClientById($id_client);
+                exit();
+            }
             $controller->getAllClients();
             
           

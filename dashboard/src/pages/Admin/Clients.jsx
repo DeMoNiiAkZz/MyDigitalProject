@@ -54,7 +54,7 @@ function ClientsAdmin() {
           
           <div className="row mt-5">
             {filtreClients.map(client => (
-              <div key={client.id} onClick={() => navigate(`/admin/client/${client.id}`)} className="col-lg-4 col-md-6 mb-3 choisir-carte">
+              <div key={client.id} onClick={() => navigate(`/admin/client/details/${client.id}`)} className="col-lg-4 col-md-6 mb-3 choisir-carte">
                 <div className="card shadow-sm p-3 rounded-4">
                   <div className="card-body">
                     <h5 className="card-title">{client.prenom} {client.nom}</h5>
